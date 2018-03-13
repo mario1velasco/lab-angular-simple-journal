@@ -1,12 +1,21 @@
-<p>
-  journal-list works!
-</p>
-<tr *ngFor="let journal of journals">
-  <td>{{ journal._id }}</td>
-  <td>{{ journal.title }}</td>
-  <td>{{ journal.content }}</td>
-  <td>
-    <button (click)="showContactDetails(journal.id)">Details</button>
-    <button (click)="editContact(journal.id)">Edit</button>
-  </td>
-</tr>
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let journal of journals">
+      <td>{{ journal._id }}</td>
+      <td>{{ journal.title }}</td>
+      <td>{{ journal.content }}</td>
+      <td>
+        <button (click)="showJournalDetails(journal._id)">Details</button>
+        <button (click)="editJournal(journal._id)">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

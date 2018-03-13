@@ -20,6 +20,9 @@ export class JournalListComponent implements OnInit {
     this.journalsService.list()
     .subscribe(journals=>this.journals=journals)
   }
-    
+  
+  showJournalDetails(id:string){
+    this.router.navigate(['/journals', id]);
+  }
 
 }

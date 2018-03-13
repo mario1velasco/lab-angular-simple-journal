@@ -10,12 +10,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/misc/home/home.component';
 import { routes } from './app.routes';
 import { JournalListComponent } from './components/journal/journal-list/journal-list.component';
+import { JournalBaseComponent } from './components/journal/journal-base/journal-base.component';
+import { JournalItemComponent } from './components/journal/journal-item/journal-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    JournalListComponent
+    JournalListComponent,
+    JournalBaseComponent,
+    JournalItemComponent
   ],
   imports: [
     BrowserModule, 
