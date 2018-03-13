@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class JournalsService {
   private static readonly BASE_API: string = environment.apiBase;
-  private static readonly JOURNALS_API: string = `${JournalsService.BASE_API}/api`;
+  private static readonly JOURNALS_API: string = `${JournalsService.BASE_API}/journal-entries`;
   private static defaultHeaders = new Headers({ 'Content-Type': 'application/json' });
   private static defaultOptions = new RequestOptions({ headers: JournalsService.defaultHeaders });
 
