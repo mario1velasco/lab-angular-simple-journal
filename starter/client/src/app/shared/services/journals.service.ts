@@ -1,6 +1,6 @@
+import { Journal } from './../models/journal.model';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
-import { Journal } from '../models/journal.model';
 import { Http, Response, Headers, RequestOptions  } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
@@ -24,6 +24,13 @@ export class JournalsService {
       .map((res: Response) => res.json())
       .catch((error: Response) => this.handleError(error));
   }
+
+  newJournal(journal:Journal): Observable<Journal> {
+    return this.http.post(`${JournalsService.JOURNALS_API}`, JSON.stringify(journal), JournalsService.defaultOptions)
+      .map((res: Response) => res.json())
+      .catch((error: Response) => this.handleError(error));
+  }
+
 
   private handleError(error: Response): Observable<any> {
     if (!environment.production) {

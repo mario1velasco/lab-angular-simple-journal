@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import './rxjs.operators';
 
@@ -24,7 +25,8 @@ import { JournalItemComponent } from './components/journal/journal-item/journal-
   imports: [
     BrowserModule, 
     RouterModule.forRoot(routes),
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [JournalsService],
   bootstrap: [AppComponent]
